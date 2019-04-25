@@ -1,0 +1,9 @@
+[Unit]
+Description=Start SAFE for pendant at system start.
+
+[Service]
+WorkingDirectory=/var/lib/snips/snips-satellite-safe
+ExecStart=python3 /var/lib/snips/snips-satellite-safe/button-service_safe.py
+
+[Install]
+WantedBy=multi-user.target
