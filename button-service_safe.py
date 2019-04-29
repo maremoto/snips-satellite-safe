@@ -115,7 +115,7 @@ class SatelliteService(object):
 
             self.__led.on()
         
-            if self.POWER_SAVING == 1:
+            if self.__c.POWER_SAVING == 1:
                 print("starting wifi")
                 subprocess.call("sudo /sbin/ifup wlan0",shell=True)
                 time.sleep(0.5)
@@ -149,7 +149,7 @@ class SatelliteService(object):
         subprocess.call("sudo systemctl stop snips-audio-server",shell=True)
         subprocess.call("sudo systemctl disable snips-audio-server",shell=True)
 
-        if self.POWER_SAVING == 1:
+        if self.__c.POWER_SAVING == 1:
             print("stopping wifi")
             subprocess.call("sudo /sbin/ifdown wlan0",shell=True)
 
