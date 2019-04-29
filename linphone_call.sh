@@ -78,6 +78,9 @@ fi
 
 function configure()
 {
+  # Set home if empty
+  if [[ -z $HOME ]]; then export HOME=$(pwd) ; fi 
+
   # Get configuration data
   echo " ... reading configuration"
   CMD=$(awk -F= 'BEGIN {section=""; host=""; username=""; passwd=""; registrable_proxy=0;}
