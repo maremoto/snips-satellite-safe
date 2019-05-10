@@ -3,7 +3,11 @@ Description=Start SAFE for pendant at system start.
 
 [Service]
 WorkingDirectory=/var/lib/snips/snips-satellite-safe
-ExecStart=/usr/bin/python3 /var/lib/snips/snips-satellite-safe/button-service_safe.py
+ExecStart=/usr/bin/python3 -u /var/lib/snips/snips-satellite-safe/button-service_safe.py
+
+StandardOutput=journal
+StandardError=journal
+SyslogIdentifier=snips-safependant-server
 
 [Install]
 WantedBy=multi-user.target
