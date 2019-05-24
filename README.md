@@ -117,6 +117,7 @@ Then create a service to autostart at boot, but let it disabled until the config
 ```bash
 cd snips-satellite-safe
 sudo cp snips-safependant-server.service /etc/systemd/system
+sudo chmod 755 /etc/systemd/system/snips-safependant-server.service
 sudo systemctl daemon-reload
 sudo systemctl disable snips-safependant-server
 ```
@@ -235,7 +236,7 @@ Sofpthone invoke configuration, .
 
 > ***The `linphonerc.ini` file in the project is only a sample, and has to be modified***
 
-## Record your own SOS message
+### Record your own SOS message
 
 The sos mesage is a wav file that will be automatically played when the system takes the default call actions (when the client is not able to skpeak or indicate who to call).
 You should record it with a clear message, e.g. "Please help, there is an emergency at 5 Elm st.".
