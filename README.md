@@ -1,9 +1,11 @@
 # snips-satellite-safe
-SAFE code for satellite pendant, not an SNIPS app
+SAFE code for satellite pendant, not an SNIPS app.
 
 [![MIT License](https://img.shields.io/badge/license-MIT-green.svg)](https://github.com/maremoto/snips-satellite-safe/blob/master/LICENSE)
 
-This is a code to deploy in the satellite (pendant) devices of the SAFE solution.
+<img src="https://github.com/maremoto/snips-resources-safe/blob/master/docs/SAFE.png" alt="SAFE logo">
+
+This is the code to deploy in the satellite (pendant) devices of the SAFE solution.
 
 A pendant does not implement a full Snips platform, but only the audio server service, and most of the functionality relays in the [Base platform](https://github.com/maremoto/snips-app-safe/blob/master/README.md).
 
@@ -276,6 +278,12 @@ This will disable the wi-fi communication (with `power_save=1`) and start the se
 ```
 sudo systemctl enable snips-safependant-server
 ```
+
+## Dialogue flow
+
+This is the conversation messages flow for a voice dialogue with the device.
+
+<img src="https://github.com/maremoto/snips-resources-safe/blob/master/docs/SAFE%20dialogue.png" alt="SAFE dialogue">
 
 ## To Do
 
